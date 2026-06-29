@@ -2,12 +2,12 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { useSelector, useDispatch } from 'react-redux'
-import { RootState } from './redux/store'
+
 import { increment, decrease } from './redux/counter/counter.slice'
+import { useAppDispatch, useAppSelector } from './redux/hooks'
 function App() {
-  const count = useSelector((state: RootState) => state.counter);
-  const dispatch = useDispatch();
+  const count = useAppSelector(state => state.counter)
+  const dispatch = useAppDispatch();
 
   return (
     <>
