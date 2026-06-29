@@ -1,7 +1,8 @@
 
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import Button from 'react-bootstrap/Button';
+
 
 import { increment, decrease } from './redux/counter/counter.slice'
 import { useAppDispatch, useAppSelector } from './redux/hooks'
@@ -22,12 +23,13 @@ function App() {
       <div>
         <h1>My current count ={count.value}
         </h1>
+        <Button variant='warning'>Test Bootstrap</Button>
         <div>
           <button
-            onClick={() => dispatch(increment())}
+            onClick={() => { dispatch(increment()) }}
           > Increase </button>
           <button
-            onClick={() => dispatch(decrease())}
+            onClick={() => { dispatch(decrease()) }}
           > Decrease </button>
         </div>
       </div>
