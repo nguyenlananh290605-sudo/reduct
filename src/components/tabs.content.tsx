@@ -14,7 +14,7 @@ function TabsContent() {
                 <Tab eventKey="users" title="User">
                     <UsersTable />
                 </Tab>
-                <Tab eventKey="blog" title="Blog">
+                <Tab eventKey="blogs" title="Blogs">
                     Tab content for Profile
                 </Tab>
 

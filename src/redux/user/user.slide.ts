@@ -8,9 +8,13 @@ export const fetchListUsers = createAsyncThunk(
         return data;
     }
 )
-
-const initialState = {
-    listUser: [],
+interface IUser {
+    id: number;
+    name: string;
+    email: string;
+}
+const initialState: { listUsers: IUser[], } = {
+    listUsers: [],
 
 }
 
@@ -20,9 +24,9 @@ export const userSlice = createSlice({
     reducers: {
 
     },
-    extraReducers: builder => {
+    extraReducers: (builder) => {
         builder.addCase(fetchListUsers.fulfilled, (state, action) => {
-            console.log(">>check actions", action)
+            state.listUsers = action.payload;
         })
     },
 })
