@@ -5,7 +5,7 @@ export interface CounterState {
 }
 
 const initialState = {
-    value: 0,
+    value: 96,
     name: 'lan anh',
     address: {
         name: "ha noi",
